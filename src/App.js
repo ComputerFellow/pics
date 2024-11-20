@@ -6,8 +6,8 @@ import searchImages from './api';
 function App() {
 const [images, setImages] = useState([]);  
 
-  const handleSubmit = async (term) => {
-    const result = await searchImages(term);
+  const handleSubmit = async (term, perPage = 10) => {
+    const result = await searchImages(term, perPage);
 
     setImages(result)
   }
